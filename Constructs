@@ -1,0 +1,136 @@
+# --------- Data Types -----------
+
+Local Variables
+Module Variables
+Project Variables - which can be used via the project in various modules
+# Public num1 As Integer 
+
+# --------- Dialogue Box
+vbokOnly or vbOkCancel
+Input and Output
+
+# two built-in dialog boxes
+1) MsgBox
+2) InputBox
+
+# Example
+Dim strName As String #Variable declaration
+strName = Cells.(4, 3).Value # strName = InputBox("Enter your name", "iDemo") 'input box
+MsgBox "Hello" & strName
+
+#-----Assignment
+Public name As String
+Public studentNo As Integer
+
+studentNo = InputBox("Enter your student no", "demo")
+name = InputBox("Enter your name", "demo")
+
+Cells(2,2).Value = studentNo
+Cells(3, 2).Value = name
+
+
+# ----- Conditionals -----
+# If statements
+
+If intA > intB Then
+     Cells(7, 3) = intA
+Else 
+    Cells(7, 3) = intB
+End If
+
+#----------------------
+
+If selected = 1 Then
+      dbResult = intA + intB 
+ElseIf selected = 2 Then 
+      dbResult = intA - intB
+ElseIf selected = 3 Then
+      dbResult = intA  * intB
+ElseIf selected = 4 Then
+      dbResult = intA / intB
+End If
+
+Cells(19, 3) = dbResult
+
+
+# -------- Select Case --------
+
+strGenCode = "M"
+
+Select Case strGenCode
+Case "M"
+     strGender = "Male"
+Case "F" 
+     strGender = "Female"
+End Select
+
+# or
+
+intRollno = 21
+
+Select Case intRollno
+    Case 1 To 15
+    strGroup = "Rockers"
+    Case 16 to 30
+    strGroup = "Avengers"
+    Case 31 to 45
+    strGroup = "Harbingers"
+End Select
+
+MsgBox "My Group = " & strGroup
+
+# or
+
+intDiv = 4
+
+Select Case intDiv
+     Case 1, 2
+     strDivColor = "Yellow"
+     Case 3, 4
+     strDivColor = "Blue"
+     Case 5, 6
+     strDivColor = "Red"
+End Select
+
+MsgBox "Division Color = " & strDivColor
+
+# or
+
+dblPer = 70.29
+
+Select Case dblPer
+    Case Is < 40
+         strGrade = "E"
+    Case Is < 50
+         strGrade = "D"
+    Case Is < 60
+         strGrade = "C"
+    Case Is < 70
+         strGrade = "B"
+    Case Else 
+         strGrade = "A"
+End Select
+
+MsgBox = "Grade = " & strGrade
+
+
+# ------------- While Wend ---------------
+
+
+# ---------- For Next Loop ----------
+
+Dim intCol As Integer
+
+For intCol = 1 To 5 Step 1
+    Cells(1, intCol) = intCol 
+Next intCol 
+
+# or
+
+intCol = 1
+For intCount = 5 To 1 Step -1
+    Cells(1, intCol) = intCount
+    intCol = intCol + 1
+Next intCount
+
+
