@@ -134,3 +134,15 @@ For intCount = 5 To 1 Step -1
 Next intCount
 
 
+#  ------- For Each Loop -------
+Dim MyCell As Variant 
+
+For Each MyCell in Range("A2:A6")
+MyCell.Value = Replace(MyCell.Value, "-", "") # replace function is used to replace hyphen (-) with spaces (" ")
+Next MyCell 
+
+
+# If Construct
+
+# Iteration
+
