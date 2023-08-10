@@ -56,6 +56,90 @@ End Sub
 ' Module Variable ->
 ' In the beginning of a module write Option Explicit, variables can be accessed through the whole module
 
+' Project Variable
+Public intNum As Integer
+Sub project_variable()
+   intNum = 12
+End Sub
+
+
+' Input Box
+Sub InputBox1()
+  Dim strHello As String
+  strHello = InputBox("Enter your name: ", "Name Question")
+  If strHello = "Kadir" Then
+     MsgBox "Hello " & strHello
+  Else
+     MsgBox "You are not qualified to Enter " & strHello
+  End If
+End Sub
+
+Sub InputBox2()
+  Dim intRollNo As Long
+  Dim strName As String
+  intRollNo = InputBox("Enter your Roll No ", "Demo Roll No")
+  strName = InputBox("Enter your Name ", "Demo Name")
+  
+  TestSht.Cells(2, 2).Value = intRollNo
+  TestSht.Cells(3, 2).Value = strName
+  
+  MsgBox "Roll No = " + CStr(intRollNo) + " Name = " + strName  ' CStr is used to conver the integer to string
+  
+End Sub
+
+
+' Statements
+' Conditional Statements:
+    ' If ... Then ... Else Statement
+    ' Select ... Case Statement
+' Loop Statements:
+    ' Do While ... Loop
+    ' While ... Wend
+    ' For ... Next
+    ' For Each ... Next
+' Other control Statements:
+    ' With ... End With
+
+
+
+' If Statements
+Sub Conditional_Statement()
+  Dim dblResult As Double
+  Dim intAge As Integer
+  
+  intAge = 3
+  
+  If intAge = 1 Then
+     dblResult = 10 + 10
+  ElseIf intAge = 2 Then
+     dblResult = 10 - 10
+  ElseIf intAge = 3 Then
+     dblResult = 10 * 10
+  ElseIf intAge = 4 Then
+     dblResult = 10 / 10
+  End If
+  TestSht.Cells(1, 1).Value = dblResult
+End Sub
+
+'-----------------
+'Assignment if statement
+'-----------------
+
+Sub If_Statement()
+  Dim intNum As Integer
+  
+  intNum = InputBox("Enter any Integer number", "demo")
+  
+  If intNum Mod 2 = 0 Then   ' Mod function
+     MsgBox "Even Number"
+  Else
+     MsgBox "Odd Number"
+  End If
+End Sub
+
+
+
+
 
 
 
