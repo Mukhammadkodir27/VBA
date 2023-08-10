@@ -137,9 +137,40 @@ Sub If_Statement()
   End If
 End Sub
 
+' Select Case
+Sub Select_Case()
+  Dim strGender As String
+  Dim strGenderCode As String
+  
+  strGenderCode = InputBox("Enter your Gender Code (M/F)", "Demo Gender")
+  
+  Select Case strGenderCode
+  Case "M"
+      strGender = "Male"
+  Case "F"
+      strGender = "Female"
+  End Select
+  
+  If strGender = "Male" Then
+     MsgBox "He is " & strGender
+  ElseIf strGender = "Female" Then
+     MsgBox "She is " & strGender
+  Else
+     MsgBox "Wrong Input"
+  End If
+End Sub
 
 
+' Select Case using multiple Values
+' Select Case nnn
+'     Case 1, 2
+'     Case 3, 4
+' End Select
 
-
-
-
+' Select Case using Condition
+' Select Case intAge
+'     Case Is < 12
+'     Case Is > 24
+'     Case Is = 35
+'     Case Is < 99
+' End Select
