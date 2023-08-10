@@ -1,0 +1,61 @@
+Sub ClearSheet()
+    ActiveSheet.UsedRange.Clear 'Clear all cells
+    ActiveSheet.UsedRange.ClearFormats  'Clear the formats
+End Sub
+
+' Clear
+' ClearFormats
+' Copy
+' Offset
+' Select
+
+' ===== Functions =====
+
+Function fnSearchBEmpId(empId As Long) As Integer
+  Dim lastRow As Long, empAddress As String
+  Dim TargetRange As Range
+  On Error GoTo MyErrorHandler
+  lastRow = EmployeeSheet.UsedRange.Rows.Count
+  Set TargetRange = EmployeeSheet.Range("A1:A" & lastRow)
+  fnSearchByEmpId = WorksheetFunction.Match(empId, TargetRange, 0)
+  Exit Function
+MyErrorHandler:
+    fnSearchByEmpId = 0
+End Function
+
+
+' Match Function
+
+
+' Use ChartObject to create a chart
+
+' AdvancedFilter(Action, CriteriaRange, CopyToRane, Unique) -> Filters or copies data from a list based on a criteria range
+
+'================================
+
+Sub Constants()
+  Const myInteger As Integer = 42
+  Const myString As String = "Monday"
+  Const myDate As Date = "#02.02.2002#"
+  'These are constant values
+End Sub
+
+
+' confidential - private scope -> Local Variable
+' limited to few members only - module scope -> Module Variable
+' less important - public scope -> Project Variable
+
+
+' Local Variable Declaration:
+Sub local_variable()
+  Dim strName As String ' local variable
+  strName = Cells(3, 4)
+  MsgBox "Hello " & strName
+End Sub
+
+' Module Variable ->
+' In the beginning of a module write Option Explicit, variables can be accessed through the whole module
+
+
+
+
