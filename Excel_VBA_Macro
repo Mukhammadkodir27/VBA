@@ -2,12 +2,12 @@
 '---------- Copy Paste ----------
 Sub copy_paste()
     '1) Method
-    ' Range("B1:B10") = Range("A1:A10").Value
+     Range("B1:B10") = Range("A1:A10").Value
     
     '2) Method
-    ' Range("A1:A10").Copy
-    ' Range("D1:D10").PasteSpecial
-    ' Application.CutCopyMode = False
+     Range("A1:A10").Copy
+     Range("D1:D10").pastespecial
+     Application.CutCopyMode = False
 End Sub
 
 
@@ -212,5 +212,28 @@ Sheets("Details").Tab.ColorIndex = 1
 Sheets("Details").Tab.ColorIndex = 10
 
 Sheets("Details").Tab.color = False
+
+End Sub
+
+
+
+' ---------- Hide and Unhide Sheets ----------
+Sub Hide_Unhide_Sheets()
+
+Sheets("Details").Visible = False
+Sheets("Details").Visible = True
+
+Sheets("Properties").Visible = False
+Sheets("Properties").Visible = True
+
+End Sub
+
+
+
+' ---------- Sheet Protection ----------
+Sub Protect_Unprotect_Sheet()
+
+Sheets("Details").Protect Password:=123
+Sheets("Details").Unprotect Password:=123
 
 End Sub
