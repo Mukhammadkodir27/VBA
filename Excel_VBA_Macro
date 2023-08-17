@@ -276,3 +276,16 @@ MsgBox (ActiveWorkbook.Name)
 MsgBox (ThisWorkbook.Name)
 
 End Sub
+
+
+
+' ---------- Save & Close Workbook ----------
+Sub Workbook_Save_Close()
+
+Workbooks("Help_Macro_Dev.xlsm").Sheets(2).Range("A1:A10") = "Excel"
+
+Workbooks("Help_Macro_Dev.xlsm").Save
+
+Workbooks("Help_Macro_Dev.xlsm").Close
+
+End Sub
