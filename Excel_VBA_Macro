@@ -306,12 +306,14 @@ End Sub
 
 
 
+' ---------- Delete Workbook ----------
+Sub Workbook_Delete()
 
+Kill ("E:\a.xlsx")
+Kill ("E:\b.xlsx")
+Kill ("E:\c.xlsx")
 
+Kill ("E:\Book1.xlsx")
+Kill ("E:\Demobook.xlsx")
 
-
-
-
-
-
-
+End Sub
