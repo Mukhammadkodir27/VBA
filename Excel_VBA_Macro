@@ -317,3 +317,16 @@ Kill ("E:\Book1.xlsx")
 Kill ("E:\Demobook.xlsx")
 
 End Sub
+
+
+
+
+' ---------- Create Folder ----------
+Sub Create_Folder()
+
+MkDir ("D:\Kadir\Infosys2\Folder1")
+MkDir ("D:\Kadir\Infosys2\Folder2")
+MkDir ("D:\Kadir\Infosys2\Folder3")
+MkDir ("D:\Kadir\Infosys2\Folder4")
+
+End Sub
