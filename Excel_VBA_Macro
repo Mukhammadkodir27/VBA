@@ -237,3 +237,42 @@ Sheets("Details").Protect Password:=123
 Sheets("Details").Unprotect Password:=123
 
 End Sub
+
+
+
+' ---------- Activate Sheet ----------
+Sub Activate_Sheet()
+
+    Sheets("Properties").Activate
+    
+    Sheets("Details").Select
+    
+    Sheets("Properties").Activate
+
+End Sub
+
+
+
+' ---------- Create Workbook ----------
+Sub Workbook_Create()
+
+Workbooks.Add
+
+Workbooks.Add.SaveAs Filename:="D:\Demobook.xlsx"
+
+End Sub
+
+
+
+' ---------- Get Workbook Name ----------
+Sub Get_Workbook_Name()
+
+MsgBox (ActiveWorkbook.Name)
+MsgBox (ThisWorkbook.Name)
+
+Workbooks("Book1.xlsx").Activate
+
+MsgBox (ActiveWorkbook.Name)
+MsgBox (ThisWorkbook.Name)
+
+End Sub
