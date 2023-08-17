@@ -289,3 +289,29 @@ Workbooks("Help_Macro_Dev.xlsm").Save
 Workbooks("Help_Macro_Dev.xlsm").Close
 
 End Sub
+
+
+
+
+' ---------- Open and Close Workbook ----------
+Sub Workbook_Open_Close()
+
+Workbooks.Open Filename:="E:\Demobook.xlsx"
+Workbooks("Demobook.xlsx").Sheets(2).Range("A1:A10") = "Excel"
+Workbooks("Demobook.xlsx").Save
+Workbooks("Demobook.xlsx").Close
+
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
