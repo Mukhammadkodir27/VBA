@@ -330,3 +330,44 @@ MkDir ("D:\Kadir\Infosys2\Folder3")
 MkDir ("D:\Kadir\Infosys2\Folder4")
 
 End Sub
+
+
+
+
+' ---------- Types of Errors ----------
+Sub types_of_errors()
+
+' Mainly there are 3 types of errors in VBA:
+' 1) Syntax Errors
+' 2) Compile Errors
+' 3) Run-time Errors
+
+' Syntax errors work for one line (statement) at a time, while compile errors for the whole block of code
+' You will find out run-time error only after executing and testing the code
+
+End Sub
+
+
+
+
+' ---------- Error Handling ----------
+Sub Error_Handling()
+
+'''On Error Resume Next
+'''
+'''    MsgBox 10
+'''    MsgBox 10 / 0
+'''    MsgBox 20
+
+On Error GoTo abc
+    MsgBox 10
+    MsgBox 10 / 0
+    MsgBox 20
+    
+Done:
+   Exit Sub
+   
+abc:
+   MsgBox "Error message is xyz"
+   
+End Sub
